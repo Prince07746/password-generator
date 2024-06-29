@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>SecureKey Password Generator</title>
+  <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="index.js"></script>
+</head>
+<body>
+
+  <h1>SecureKey Password Generator</h1>
+  <div id="copied-password">
+    <p id="text-pass"></p>
+  </div>
+  <form>
+    <div id="password-area">
+    <input id="password" type="text" readonly><button  onclick="copyToClipboard()">Copy</button>
+</div>
+    <div id="password-strength">
+        
+        <p id="progress-percentage">Password Strength: 0%</p>
+        <div class="progress-container">
+            
+            <div class="progress-bar" id="password-strength-bar"></div>
+          </div>
+
+    </div>
+    <lable>
+    <p>password length</p>
+    <input type="number" id="number" placeholder="16"> 
+    </lable>
+    <label>
+      <input type="checkbox" id="includeLettersL" onchange=""><p> Include Lowercase(a-z)</p>
+    </label>
+    <label>
+      <input type="checkbox" id="includeLettersU" onchange=""><p> Include Upercase(A-Z)</p>
+    </label>
+    <br>
+    <label>
+      <input type="checkbox" id="includeNumbers"> <p>Include Numbers (1-9)</p>
+    </label>
+    <br>
+    <label>
+      <input type="checkbox" id="includeSpecialChars"><p> Include Special Characters ( $%#\? )</p>
+    </label>
+    <br>
+    <p> Key word for Password</p>
+    <label>
+   <input type="text" id="hint"> 
+    </label>
+
+  </form>
+  <button onclick="generatePassword()" id="button-generate">Generate Password</button>
+
+
+ 
+</body>
+</html>
